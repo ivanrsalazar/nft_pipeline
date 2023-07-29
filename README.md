@@ -11,7 +11,27 @@ The main objective of this pipeline is to streamline the collection and processi
 - The instances continuously capture event data from various NFT collections and write it to a local file
 - The data is batched hourly, where the application writes to a new file as soon as an event from a new hour is received
 - The collected data is uploaded to S3 via an hourly cron job 
-- Apache Airflow is run on a local machine, and is used to transform and load the past hours sales event data to an RDS PostgerSQL data warehouse
+- Apache Airflow is run on a local machine, and is used to download, transform, and load the past hours sales event data to an RDS PostgerSQL data warehouse
+
+### Data Sources
+
+- [Etherscan.io](https://etherscan.io/apis)
+    - Normal Transaction data
+    - Internal Transaction data
+    - ERC-20 Transaction data
+    - Block data
+
+<br>
+
+- [Alchemy.com](alchemy.com)
+  - Historical Sales data
+  - Historical Block data
+
+<br>
+
+- [Opensea.io](https://docs.opensea.io/reference/api-overview)
+  - Current NFT events data
+
 
 
 

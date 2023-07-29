@@ -33,10 +33,10 @@ The main objective of this pipeline is to streamline the collection and processi
   - Current NFT events data
 
 ### File Structure
-## api_tools.py
+#### api_tools.py
 This file serves as a central repository housing all functions used to make API calls to the Etherscan and Alchemy platforms. These functions facilitate seamless interactions with the Ethereum blockchain and provide access to essential blockchain data and information.
 
-## NftTransction.py
+#### NftTransction.py
 This file serves as a blueprint for NftTransaction objects, which are designed to encapsulate and manage data related to Non-Fungible Token (NFT) transactions. NftTransaction objects act as containers for storing crucial information about individual NFT transactions, providing a structured and organized representation of the data.
 
 - attributes
@@ -104,7 +104,7 @@ This file serves as a blueprint for NftTransaction objects, which are designed t
         - insert_tuples holds a list of unique sale fact tuples
 
 
-## update_db.py
+#### update_db.py
 
 This file represents an Airflow Directed Acyclic Graph (DAG) responsible for managing incremental data loads into the data warehouse.
 
@@ -114,7 +114,7 @@ This file represents an Airflow Directed Acyclic Graph (DAG) responsible for man
     - update_db
         - This function is triggered once create_inserts completes, and writes all the insert queries to my remote data warehouse in the cloud
 
-## past_sales.py
+#### past_sales.py
 
 This file serves as a dedicated manager for handling the historical load of past Non-Fungible Token (NFT) sales data. Its primary purpose is to automate the process of ingesting and processing historical sales data, allowing users to analyze and leverage historical NFT sales information efficiently.
 

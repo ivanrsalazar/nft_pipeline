@@ -43,7 +43,8 @@ class NftTransaction:
         buyer_qty = {},
         init_address = None,
         method_call = None,
-        tx_id = None):
+        tx_id = None,
+        none = None):
         self.events = events
         self.parties = parties
         self.block_number = block_number
@@ -56,7 +57,7 @@ class NftTransaction:
         self.buyer_qty = buyer_qty
         self.init_address = init_address
         self.method_call = method_call
-        self.tx_id = tx_id
+        self.nonce = nonce
 
 
     def printTransaction(self):

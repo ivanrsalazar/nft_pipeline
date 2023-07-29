@@ -123,6 +123,17 @@ This file serves as a dedicated manager for handling the historical load of past
 
 
 
-
+## Required
+requests
+json
+datetime
+time
+pycryptodome
+os
+airflow
+boto3
+psycopg2
+pandas
+botocore
 
 ####

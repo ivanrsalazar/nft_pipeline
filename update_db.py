@@ -13,7 +13,6 @@ import psycopg2
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from NftTransaction import NftTransaction
 import pandas
-from dotenv import load_dotenv
 import api_tools as apit
 import os
 import time

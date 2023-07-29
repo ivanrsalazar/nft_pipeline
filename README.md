@@ -34,10 +34,11 @@ The main objective of this pipeline is to streamline the collection and processi
 
 ### File Structure
 ## api_tools.py
-This file houses all functions used to make calls to the Etherscan and Alchemy APIs
+This file serves as a central repository housing all functions used to make API calls to the Etherscan and Alchemy platforms. These functions facilitate seamless interactions with the Ethereum blockchain and provide access to essential blockchain data and information.
 
 ## NftTransction.py
-This file blueprints NftTransaction objects which hold the data from an NFT transaction
+This file serves as a blueprint for NftTransaction objects, which are designed to encapsulate and manage data related to Non-Fungible Token (NFT) transactions. NftTransaction objects act as containers for storing crucial information about individual NFT transactions, providing a structured and organized representation of the data.
+
 - attributes
     - events
         - list
@@ -87,15 +88,35 @@ This file blueprints NftTransaction objects which hold the data from an NFT tran
     - printTransaction(self)
         - output all the important transaction data
         - used for logging and debugging
+
+        <br>
+
     - printSales(self)
         - output all sales data
         - used for logging and debugging
 
+    <br>
+
     - get_queries(self, nftDF)
         - inputs a pandas DF holding the nft_id primary keys
-        - outputs a insert_queries, insert_tuples
+        - outputs insert_queries, insert_tuples
         - insert_queries holds a list of SQL insert queries
-        - insert_tuples holds a tuple of unique sales data facts
+        - insert_tuples holds a list of unique sale fact tuples
+
+
+## update_db.py
+
+This file represents an Airflow Directed Acyclic Graph (DAG) responsible for managing incremental data loads into the data warehouse.
+
+- functions
+    - create_inserts
+        - This function downloads the past hours' event data from S3 and performs transformations, then writes valid sales to a SQL file
+    - update_db
+        - This function is triggered once create_inserts completes, and writes all the insert queries to my remote data warehouse in the cloud
+
+## past_sales.py
+
+This file serves as a dedicated manager for handling the historical load of past Non-Fungible Token (NFT) sales data. Its primary purpose is to automate the process of ingesting and processing historical sales data, allowing users to analyze and leverage historical NFT sales information efficiently.
 
 
 

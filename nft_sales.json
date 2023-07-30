@@ -1,0 +1,41 @@
+{
+    "nftSales": [
+        {
+            "marketplace": "x2y2",
+            "marketplaceAddress": "0x74312363e45dcaba76c59ec49a7aa8a65a67eed3",
+            "contractAddress": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+            "tokenId": "1578",
+            "quantity": "1",
+            "buyerAddress": "0xf2cf7378e44be078732c215fad97af709379ca1d",
+            "sellerAddress": "0x8b0144c5a380bcb46b25f7b370307e03dc716093",
+            "taker": "BUYER",
+            "sellerFee": {
+                "amount": "66000000000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "protocolFee": {
+                "amount": "0",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "royaltyFee": {
+                "amount": "0",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "blockNumber": 15102883,
+            "logIndex": 491,
+            "bundleIndex": 0,
+            "transactionHash": "0x21b652042486b0c2f841bc63f5caa4bccc2c1d18dbe5c53f1c9ef177bfdcca22"
+        }
+    ],
+    "validAt": {
+        "blockNumber": 17809025,
+        "blockHash": "0xac5a3c438534f8c8dc5b327110993781db2ef380f916b9ada8f4e5e967c0c104",
+        "blockTimestamp": "2023-07-30T23:09:35Z"
+    }
+}

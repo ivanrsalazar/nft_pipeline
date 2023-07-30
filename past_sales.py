@@ -6,7 +6,7 @@ import pandas
 import psycopg2
 import os
 
-db_pass = os.environ.get('db_pass')
+db_password = os.environ.get('db_pass')
 
 
 db_name = 'initial_beans'
@@ -24,7 +24,15 @@ connection = psycopg2.connect(
 
 
 cursor = connection.cursor()    
-collection = 'BAYC'
+
+#-------------------------------------------------------------------------------
+#---------------------------READ THIS-------------------------------------------
+# uncomment one of the lines below to select which collection fill-in sales for
+#collection = 'BAYC'; token_range = 10_000
+#collection = 'MAYC'; token_range = 30_008
+#collection = 'BAKC'; token_range = 10_000
+#collection = 'AZUKI'; token_range = 10_000
+
 nftDF = pandas.read_csv("/Users/ivansalazar/Desktop/sandbox/sandbox/sandbox/nft_ids.csv")
 for token_id in range(10_000):
     print(f'token_id : {token_id}')

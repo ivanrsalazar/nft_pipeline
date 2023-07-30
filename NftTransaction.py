@@ -44,7 +44,7 @@ class NftTransaction:
         init_address = None,
         method_call = None,
         tx_id = None,
-        none = None):
+        nonce= None):
         self.events = events
         self.parties = parties
         self.block_number = block_number

@@ -121,7 +121,7 @@ This file serves as a dedicated manager for handling the historical load of past
 
 #### collection_app.py
 
-This script establishes the long lasting connection to OpenSea's
+This establishes the long lasting connection to OpenSea's
 Stream API
 
 Note that this file is meant to be a general template for subcribing to
@@ -130,6 +130,7 @@ you need to find the collection slug and update the file
 
 Also, you probably want to be running these files are more than one machine to increase availabilty and redundancy. I would suggest a minimum of two machines, preferably on the cloud.
 
+#### 
 
 
 ## Required

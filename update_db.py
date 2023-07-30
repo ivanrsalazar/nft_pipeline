@@ -307,6 +307,7 @@ def _create_inserts():
                                 )
                             break
                         except TypeError:
+                            print('batchBuyWithERC20s while loop')
                             time.sleep(60)
                             pass
 

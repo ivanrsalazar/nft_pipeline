@@ -119,11 +119,25 @@ This file represents an Airflow Directed Acyclic Graph (DAG) responsible for man
 This file serves as a dedicated manager for handling the historical load of past Non-Fungible Token (NFT) sales data. Its primary purpose is to automate the process of ingesting and processing historical sales data, allowing users to analyze and leverage historical NFT sales information efficiently.
 
 
+#### collection_app.py
 
+This script establishes the long lasting connection to OpenSea's
+Stream API
+
+Note that this file is meant to be a general template for subcribing to
+one collection, if you want to subscribe to more than one collection, 
+you need to find the collection slug and update the file
+
+Also, you probably want to be running these files are more than one machine to increase availabilty and redundancy. I would suggest a minimum of two machines, preferably on the cloud.
 
 
 
 ## Required
+- asyncio
+- websockets
+- ssl
+- certifi
+- logging
 - requests
 - json
 - datetime

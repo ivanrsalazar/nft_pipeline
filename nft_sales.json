@@ -1,41 +1,105 @@
 {
     "nftSales": [
         {
-            "marketplace": "x2y2",
-            "marketplaceAddress": "0x74312363e45dcaba76c59ec49a7aa8a65a67eed3",
+            "marketplace": "wyvern",
+            "marketplaceAddress": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b",
             "contractAddress": "0xed5af388653567af2f388e6224dc7c4b3241c544",
-            "tokenId": "1578",
+            "tokenId": "2272",
             "quantity": "1",
-            "buyerAddress": "0xf2cf7378e44be078732c215fad97af709379ca1d",
-            "sellerAddress": "0x8b0144c5a380bcb46b25f7b370307e03dc716093",
+            "buyerAddress": "0xab99526b09389ae86c2219814d977e079630ff96",
+            "sellerAddress": "0xb0be64a021cbaa65de2bc48c9a924ba47c69429c",
             "taker": "BUYER",
             "sellerFee": {
-                "amount": "66000000000000000000",
+                "amount": "1831500000000000000",
                 "tokenAddress": "0x0000000000000000000000000000000000000000",
                 "symbol": "ETH",
                 "decimals": 18
             },
             "protocolFee": {
-                "amount": "0",
+                "amount": "49500000000000000",
                 "tokenAddress": "0x0000000000000000000000000000000000000000",
                 "symbol": "ETH",
                 "decimals": 18
             },
             "royaltyFee": {
-                "amount": "0",
+                "amount": "99000000000000000",
                 "tokenAddress": "0x0000000000000000000000000000000000000000",
                 "symbol": "ETH",
                 "decimals": 18
             },
-            "blockNumber": 15102883,
-            "logIndex": 491,
+            "blockNumber": 13992382,
+            "logIndex": 392,
             "bundleIndex": 0,
-            "transactionHash": "0x21b652042486b0c2f841bc63f5caa4bccc2c1d18dbe5c53f1c9ef177bfdcca22"
+            "transactionHash": "0xf4069f3744878ceabadf4f9cb1b338f6a61e0d30279ee84b4bd6c1fec32ce611"
+        },
+        {
+            "marketplace": "wyvern",
+            "marketplaceAddress": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b",
+            "contractAddress": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+            "tokenId": "2272",
+            "quantity": "1",
+            "buyerAddress": "0x29e2d5e5b375d76e91caaae341420657eabbb8c5",
+            "sellerAddress": "0x0f9cd2e88458006c9fd044f2d0c9635e9c027b1e",
+            "taker": "BUYER",
+            "sellerFee": {
+                "amount": "2775000000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "protocolFee": {
+                "amount": "75000000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "royaltyFee": {
+                "amount": "150000000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "blockNumber": 14045177,
+            "logIndex": 111,
+            "bundleIndex": 0,
+            "transactionHash": "0x304fbf50258994a21cb988c3b572118be7d9e856b099a2118f8b8c155837c658"
+        },
+        {
+            "marketplace": "wyvern",
+            "marketplaceAddress": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b",
+            "contractAddress": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+            "tokenId": "2272",
+            "quantity": "1",
+            "buyerAddress": "0xa4e9b439ecee8cc6c9115c6b750c8c34bb772db8",
+            "sellerAddress": "0x29e2d5e5b375d76e91caaae341420657eabbb8c5",
+            "taker": "BUYER",
+            "sellerFee": {
+                "amount": "6465750000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "protocolFee": {
+                "amount": "174750000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "royaltyFee": {
+                "amount": "349500000000000000",
+                "tokenAddress": "0x0000000000000000000000000000000000000000",
+                "symbol": "ETH",
+                "decimals": 18
+            },
+            "blockNumber": 14079118,
+            "logIndex": 13,
+            "bundleIndex": 0,
+            "transactionHash": "0x58a5286bf2039d2c4c04e9997411a07a6de6520d0479b21b0b79f1b48341c53a"
         }
     ],
     "validAt": {
-        "blockNumber": 17809025,
-        "blockHash": "0xac5a3c438534f8c8dc5b327110993781db2ef380f916b9ada8f4e5e967c0c104",
-        "blockTimestamp": "2023-07-30T23:09:35Z"
+        "blockNumber": 17810742,
+        "blockHash": "0x16b02823af56c6b47f103c7387f8e7de3e112bbf20845490ab6ab623b0ace0d7",
+        "blockTimestamp": "2023-07-31T04:56:35Z"
     }
 }

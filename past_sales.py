@@ -31,10 +31,10 @@ cursor = connection.cursor()
 #collection = 'BAYC'; token_range = 10_000
 #collection = 'MAYC'; token_range = 30_008
 #collection = 'BAKC'; token_range = 10_000
-#collection = 'AZUKI'; token_range = 10_000
+collection = 'AZUKI'; token_range = 10_000
 
 nftDF = pandas.read_csv("/Users/ivansalazar/Desktop/sandbox/sandbox/sandbox/nft_ids.csv")
-for token_id in range(10_000):
+for token_id in range(token_range):
     print(f'token_id : {token_id}')
     token_sales = apit.get_nft_sales(collection, token_id, dump=True)
     for sale in token_sales:

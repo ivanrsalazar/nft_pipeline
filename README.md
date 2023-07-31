@@ -3,7 +3,7 @@
 
 
 ### Overview
-The main objective of this pipeline is to streamline the collection and processing of blockchain and sale events data from multiple NFT collections. By ingesting data from various sources, the pipeline ensures a seamless flow of information related to NFT sales events. The cleaned and transformed data is then stored in a centralized data warehouse, following the NFT Sale Transaction data model. This centralized repository provides a comprehensive and structured view of NFT transactions, facilitating in-depth analysis and valuable insights into the NFT market.
+The main objective of this pipeline is to streamline the collection and processing of blockchain and sale events data from multiple NFT collections. By ingesting data from various sources, the pipeline ensures a seamless flow of information related to NFT sales events. The cleaned and transformed data is then stored in a centralized data warehouse, following the NFT Sale Transaction data model. The grain of the warehouse is one sale event per transaction. This centralized repository provides a comprehensive and structured view of NFT transactions, facilitating in-depth analysis and valuable insights into the NFT market.
 
 
 ### Setup

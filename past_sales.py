@@ -29,12 +29,16 @@ cursor = connection.cursor()
 #---------------------------READ THIS-------------------------------------------
 # uncomment one of the lines below to select which collection fill-in sales for
 #collection = 'BAYC'; token_range = 10_000
-#collection = 'MAYC'; token_range = 30_008
+collection = 'MAYC'; token_range = 30_008
 #collection = 'BAKC'; token_range = 10_000
-collection = 'AZUKI'; token_range = 10_000
+#collection = 'AZUKI'; token_range = 10_000
 
+
+#-------------------------------------------------------------------------------
+#---------------------------READ THIS-------------------------------------------
+# You need to import the surrogate primary keys for each NFT within your data warehouse
 nftDF = pandas.read_csv("/Users/ivansalazar/Desktop/sandbox/sandbox/sandbox/nft_ids.csv")
-for token_id in range(token_range):
+for token_id in range(579,token_range,1):
     print(f'token_id : {token_id}')
     token_sales = apit.get_nft_sales(collection, token_id, dump=True)
     for sale in token_sales:
@@ -77,13 +81,14 @@ for token_id in range(token_range):
             continue
         try:
             cursor.execute(queries_list[0])
+            connection.commit()
         except psycopg2.errors.SyntaxError:
             print(insert_tuple[0])
         print('insert executed')
     time.sleep(1)
         
 
-connection.commit()
+
 cursor.close()
 connection.close()
         

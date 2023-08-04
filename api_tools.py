@@ -254,7 +254,7 @@ def get_blockdata(block_number):
     return data
 
 
-def get_blocknumber(timestamp):
+def get_blocknumber(timestamp, before=True):
     '''
     Description:
         returns the block_number given the block confirmation timestamp
@@ -274,6 +274,11 @@ def get_blocknumber(timestamp):
     'closest' : 'before',
     'apikey' : etherscan_key
     }
+
+    if before:
+        params['closest'] = 'before'
+    else:
+        params['closest'] = 'after'
 
     timestamp = datetime.datetime.strptime(timestamp,'%Y-%m-%d %H:%M:%S')
     unix_time = time.mktime(timestamp.timetuple()) - (60*60*4) 

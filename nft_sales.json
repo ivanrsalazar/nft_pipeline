@@ -1,41 +1,8 @@
 {
-    "nftSales": [
-        {
-            "marketplace": "wyvern",
-            "marketplaceAddress": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b",
-            "contractAddress": "0xed5af388653567af2f388e6224dc7c4b3241c544",
-            "tokenId": "2318",
-            "quantity": "1",
-            "buyerAddress": "0xae69ff41f0e293a38730312bd73247bd70414c0a",
-            "sellerAddress": "0xdd6d3324c75a5ae1480ef9f3394702dc28adb65e",
-            "taker": "BUYER",
-            "sellerFee": {
-                "amount": "1850000000000000000",
-                "tokenAddress": "0x0000000000000000000000000000000000000000",
-                "symbol": "ETH",
-                "decimals": 18
-            },
-            "protocolFee": {
-                "amount": "50000000000000000",
-                "tokenAddress": "0x0000000000000000000000000000000000000000",
-                "symbol": "ETH",
-                "decimals": 18
-            },
-            "royaltyFee": {
-                "amount": "100000000000000000",
-                "tokenAddress": "0x0000000000000000000000000000000000000000",
-                "symbol": "ETH",
-                "decimals": 18
-            },
-            "blockNumber": 13992451,
-            "logIndex": 149,
-            "bundleIndex": 0,
-            "transactionHash": "0xa4d327304d870edcb79c117ccb10747d596ea129fbf2e76a878948479a052e91"
-        }
-    ],
+    "nftSales": [],
     "validAt": {
-        "blockNumber": 17810757,
-        "blockHash": "0x8dad13a2b20949caea1a28c22ba9f19647194fcb3af423ddf51bb5d239d78427",
-        "blockTimestamp": "2023-07-31T04:59:35Z"
+        "blockNumber": 17830743,
+        "blockHash": "0xcd4ffda112c3e2cd9d4e7ba47617dcf6f96d69fc97ccef239c5a1be0551ace9e",
+        "blockTimestamp": "2023-08-02T23:57:35Z"
     }
 }

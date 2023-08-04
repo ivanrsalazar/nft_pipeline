@@ -18,6 +18,42 @@ import os
 import time
 import botocore
 
+def _get_blockdata():
+    # find the first and last block of the hour
+    last_hour = (dt.utcnow() + datetime.timedelta(hours=-1)).strftime('%Y-%m-%d %H:00:00')
+    this_hour = (dt.utcnow()).strftime('%Y-%m-%d %H:00:00')
+    first_block = int(apit.get_blocknumber(last_hour, before=False))
+    last_block = int(apit.get_blocknumber(this_hour))
+
+    
+    api_key = os.environ.get('block_key')
+    with open('block_data.sql', 'w') as f:
+        f.write('-- instantiating file')
+
+    # get block_data and write insert statement to sql file     
+    for block_number in range(first_block, last_block+1, 1):
+        print(block_number)
+        data = est.get_blockdata(block_number,api_key)
+        time_stamp = data['timestamp'],
+        difficulty = data['difficulty'],
+        total_difficulty = data['total_difficulty'],
+        gas_used = data['gas_used'],
+        gas_limit = data['gas_limit']
+        
+        with open('block_data.sql', 'a') as f:
+            f.write(
+            f"""
+            INSERT INTO d_block (block_id, time_stamp, difficulty,
+            total_difficulty, gas_used, gas_limit)
+            VALUES ({block_number}, {time_stamp}, {difficulty},
+            {total_difficulty}, {gas_used}, {gas_limit})
+            """
+            )
+            
+
+
+
+
 
 def _create_inserts():
     s3 = S3Hook('my_s3_conn')
@@ -344,6 +380,12 @@ with DAG(
         python_callable=_create_inserts,
         dag=dag
         )
+
+        get_blockdata = PythonOperator(
+        task_id = "get_blockdata",
+        python_callable=_get_blockdata,
+        dag=dag
+        )
         
         update_db = PostgresOperator(
         task_id='update_db',
@@ -356,7 +398,7 @@ with DAG(
         ready = DummyOperator(task_id='ready')
 
 
-        create_inserts >> update_db >> ready
+        [create_inserts, get] >> update_db >> ready
 
 
 

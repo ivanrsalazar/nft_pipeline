@@ -118,6 +118,15 @@ This file represents an Airflow Directed Acyclic Graph (DAG) responsible for man
 
 This file serves as a dedicated manager for handling the historical load of past Non-Fungible Token (NFT) sales data. Its primary purpose is to automate the process of ingesting and processing historical sales data, allowing users to analyze and leverage historical NFT sales information efficiently.
 
+#### spark_blocks.py
+This file runs a PySpark job that reads historical block data through
+concurrent API calls from multiple nodes in order to decrease overall
+extraction time
+
+#### init.sh
+The bootstrap script used to download all the dependencies needed to run
+the above Spark job
+
 
 #### collection_app.py
 

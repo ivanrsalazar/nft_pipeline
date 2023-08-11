@@ -144,6 +144,7 @@ Also, you probably want to be running these files are more than one machine to i
 
 ## Required
 - asyncio
+- pyspark
 - websockets
 - ssl
 - certifi
